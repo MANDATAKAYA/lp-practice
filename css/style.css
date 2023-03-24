@@ -1,1 +1,194 @@
 @charset "utf-8";
+body {
+  width: 100%;
+}
+.header {
+  background: #ffffff;
+  padding: 15px 0px;
+}
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+}
+.header-icon {
+  color: #777;
+}
+.button {
+  background: #6ba7eb;
+  font-size: 12px;
+  padding: 12px 14px;
+  text-decoration: none;
+  text-align: center;
+  color:#fff;
+  transition-delay: 0.3s;
+  float: right;
+}
+.button:hover {
+  color:#333;
+}
+/*背景画像*/
+.container {
+  background-image: url(../img/keyvisual/keyvisual.jpg);
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding: 400px 0px;
+}
+
+h1 {
+  font-size: 65px;
+  font-weight: 700;
+  color: #6ba7eb;
+  letter-spacing: 1px;
+}
+.container h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 30px;
+  letter-spacing: 3px;
+}
+
+.work {
+  background: #e3f2fd;
+  width: 100%;
+  padding-top: 50px;
+}
+.work h2 {
+  font-size: 40px;
+  letter-spacing: 10px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+.work p {
+  font-size: 15px;
+  line-height: 18px;
+  word-break: break-all;
+}
+.work-inner {
+  display: flex;
+}
+
+.work-img {
+  width: 440px;
+  text-align: center;
+}
+.work img {
+  width: 230px;
+}
+.work-word {
+  width: 660px;
+  text-align: center;
+}
+.skills {
+  background-color: #fff;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+.grid-inner {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px;
+  gap: 100px;
+  margin-top: 50px;
+  justify-content: center;
+}
+.grid-inner img {
+  width: 300px;
+  height: 300px;
+  opacity: 0.7;
+}
+.grid-inner img:hover {
+  opacity: 1;
+}
+/*SELECR PLANエリアCSS ここから*/
+.plan {
+  background-color: #d0dfea;
+  text-align: center;
+  padding: 50px 0px;
+}
+.plan h2 {
+  font-size: 40px;
+  letter-spacing: 10px;
+  margin-bottom: 50px;
+}
+.plan-table {
+  table-layout: fixed;/*表の幅を指定する*/
+  width: 1100px;
+  font-size: 16px;
+  margin: 0 auto;
+}
+.plan-table td {
+  padding: 10px;
+  text-align: center;
+  line-height: 22px;/*行間指定*/
+  border-left: 2px solid #fff;
+}
+.plan-table thead th {
+  padding: 10px;
+  background-color: #6ba7eb;
+  line-height: 26px;/*行間指定*/
+  border-left: 2px solid #fff;
+}
+.plan-table thead th:first-child {
+  border: none;
+}
+.plan-table tr:nth-child(odd) {/*奇数指定*/
+  background-color: #f9f9f9;
+}
+.plan-table tr:nth-child(even) {/*偶数指定*/
+  background-color: #e0efff;
+}
+/*SELECT PLANエリアここまで*/
+/*iconエリアここから*/
+.sns {
+  background: #e3f2fd;
+  padding: 200px 0px;
+}
+.sns-inner {
+  text-align: center;
+}
+.sns-format {
+  width: 185px;
+  padding: 25px 0px;
+  color: #8c8c8c;
+  overflow: hidden;/*要素が多い時に隠れるようになる*/
+  font-size: 40px;
+  text-decoration: none;
+  transition-delay: 0.5s;/*動作0.5秒遅く*/
+}
+.sns-format:hover {/*触れると背景が変わる*/
+  background: #fff;
+}
+.mail {
+  width: 185px;
+  padding: 25px 0px;
+  color: #8c8c8c;
+  overflow: hidden;
+  font-size: 40px;
+  text-decoration: none;
+  transition-delay: 0.5s;
+}
+.mail:hover {
+  background: #fff;
+}
+/*footerエリア CSS*/
+footer {
+  background: #cfd8dc;
+  width: 100%;
+}
+.footer-inner {
+  display: flex;
+  justify-content: end;/*幅指定末尾*/
+}
+.footer-inner p {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  font-size: 10px;
+  letter-spacing: 0.5px;/*行スペース*/
+}
+/*footerエリアここまで*/
