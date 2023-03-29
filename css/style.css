@@ -24,7 +24,7 @@ body {
   text-decoration: none;
   text-align: center;
   color:#fff;
-  transition-delay: 0.3s;
+  transition-duration: 0.3s;
   float: right;
 }
 .button:hover {
@@ -102,7 +102,7 @@ h1 {
 .grid-inner img {
   width: 300px;
   height: 300px;
-  transition-delay: 0.7s;
+  transition-duration: 0.7s;
   opacity: 0.7;
 }
 .grid-inner img:hover {
@@ -155,29 +155,19 @@ h1 {
 }
 .sns-inner {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
-.sns-format {
+.sns-inner a {
   width: 185px;
-  padding: 25px 0px;
   color: #8c8c8c;
   overflow: hidden;/*要素が多い時に隠れるようになる*/
   font-size: 40px;
   text-decoration: none;
-  transition-delay: 0.5s;/*動作0.5秒遅く*/
-}
-.sns-format:hover {/*触れると背景が変わる*/
-  background: #fff;
-}
-.mail {
-  width: 185px;
+  transition-duration: 0.5s;/*動作0.5秒遅く*/
   padding: 25px 0px;
-  color: #8c8c8c;
-  overflow: hidden;
-  font-size: 40px;
-  text-decoration: none;
-  transition-delay: 0.5s;
 }
-.mail:hover {
+.sns-inner a:hover {
   background: #fff;
 }
 /*footerエリア CSS*/
