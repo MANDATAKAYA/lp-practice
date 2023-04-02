@@ -30,6 +30,36 @@ body {
 .button:hover {
   color:#333;
 }
+.humberger {
+  position: relative;
+  height: 46px;
+  width: 46px;
+  display: none;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 2px solid #444;
+  border-radius: 4px;
+  float:right;
+}
+.humberger div {
+  position: absolute;
+  right: 7px;
+  height: 2px;
+  width: 28px;
+  background-color: #444;
+  border-radius: 2px;
+  display: none;
+  box-sizing: border-box;
+}
+.humberger div:nth-of-type(1) {
+  bottom: 30px;
+}
+.humberger div:nth-of-type(2) {
+  bottom: 20px;
+}
+.humberger div:nth-of-type(3) {
+  bottom: 10px;
+}
 /*背景画像*/
 .container {
   background-image: url(../img/keyvisual/keyvisual.jpg);
@@ -61,13 +91,12 @@ h1 {
 .work h2 {
   font-size: 40px;
   letter-spacing: 10px;
-  margin-top: 20px;
-  margin-bottom: 35px;
 }
 .work p {
   font-size: 15px;
   line-height: 18px;
   word-break: break-all;
+  margin-top: 35px;
 }
 .work-inner {
   display: flex;
@@ -82,6 +111,7 @@ h1 {
 .work-word {
   width: 660px;
   text-align: center;
+  margin-top: 20px;
 }
 .skills {
   background-color: #fff;
@@ -98,6 +128,8 @@ h1 {
   gap: 100px;
   margin-top: 50px;
   justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
 }
 .grid-inner img {
   width: 300px;
@@ -107,6 +139,9 @@ h1 {
 }
 .grid-inner img:hover {
   opacity: 1;
+}
+.grid-inner li {
+  height: 300px;
 }
 /*画像と文章エリアここまで*/
 /*SELECR PLANエリアCSS ここから*/
@@ -123,18 +158,23 @@ h1 {
 .plan-table {
   table-layout: fixed;/*表の幅を指定する*/
   width: 1100px;
-  font-size: 16px;
   margin: 0 auto;
+}
+.plan-table thead th {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #6ba7eb;
+  line-height: 26px;/*行間指定*/
+  border-left: 2px solid #fff;
+}
+.plan-table tbody th {
+font-size: 16px;
+line-height: 26px;
 }
 .plan-table td {
   padding: 10px;
   text-align: center;
-  line-height: 22px;/*行間指定*/
-  border-left: 2px solid #fff;
-}
-.plan-table thead th {
-  padding: 10px;
-  background-color: #6ba7eb;
+  font-size: 16px;
   line-height: 26px;/*行間指定*/
   border-left: 2px solid #fff;
 }
@@ -157,16 +197,19 @@ h1 {
   text-align: center;
   display:flex;
   justify-content: center;
-  padding: 25px 0px;
+  flex-direction: row;
+  align-items: stretch;
 }
 .sns-inner a {
   width: 185px;
+  height: 60px;
   color: #8c8c8c;
   overflow: hidden;/*要素が多い時に隠れるようになる*/
   font-size: 40px;
   text-decoration: none;
   transition-duration: 0.5s;/*動作0.5秒遅く*/
-  display:inline;
+  display:block;
+  padding: 25px 0px;
 }
 .sns-inner a:hover {/*触れると背景が変わる*/
   background: #fff;
@@ -187,3 +230,125 @@ footer {
   letter-spacing: 0.5px;/*行スペース*/
 }
 /*footerエリアここまで*/
+
+/*レスポンシブデザイン1190px max*/
+@media screen and (min-width:1101px) and ( max-width:1199px) {
+  .inner {
+    width: 97%;
+  }
+   .container {
+    padding: 250px 0px;
+   }
+   .work {
+    padding-bottom: 50px;
+  }
+  .work-inner {
+    display: block;
+  }
+  .work-img {
+    width: 100%;
+  }
+  .work-word {
+    width: 100%;
+  }
+  .grid-inner {
+    grid-template-columns: none;
+    grid-template-rows: none;
+    gap: normal;
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid-inner li {
+    height: 300px;
+  }
+  .grid-inner li:nth-of-type(1){
+    margin-top: 50px;
+  }
+  .grid-inner li:nth-of-type(4n){
+    margin-top: 80px;
+  }
+}
+/*spエリアここから*/
+@media screen and (min-width:0px) and (max-width:767px) {
+.inner {
+  width: 97%;
+}
+.button {
+  display: none;/*消す*/
+}
+.humberger {
+  display:block;/*表す*/
+ }
+ .humberger div {
+  display: block;
+ }
+ .humberger div:nth-of-type(1) {
+  bottom: 10px;
+}
+.humberger div:nth-of-type(3) {
+  bottom: 30px;
+}
+ .container {
+  padding: 200px 0px;
+ }
+  h1 {
+  font-size: 40px;
+}
+.container h2 {
+  font-size: 30px;
+}
+.work {
+  padding-bottom: 50px;
+}
+.work-inner {
+  display: block;
+}
+.work-img {
+  width: 100%;
+}
+.work-word {
+  width: 100%;
+}
+.grid-inner {
+  display: block;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  gap: normal;
+  margin-top: 0px;
+  flex-direction: column;
+  align-items: center;
+}
+.grid-inner li:nth-of-type(1){
+  margin-top: 50px;
+}
+.grid-inner li:nth-of-type(4n){
+  margin-top: 80px;
+}
+.plan-table {
+  width: 100%;
+}
+.plan-table thead th {
+  line-height: 22px;
+  font-size: 14px;
+}
+.plan-table tbody th {
+  line-height: 22px;
+  font-size: 14px;
+}
+.plan-table td {
+  font-size: 12px;
+}
+.sns {
+  padding: 50px 15px;
+}
+.sns-inner {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.sns-inner a {
+  padding: 50px 0px;
+}
+}
