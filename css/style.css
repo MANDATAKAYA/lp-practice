@@ -2,6 +2,7 @@
 body {
   width: 100%;
 }
+
 .header {
   background: #ffffff;
   padding: 15px 0px;
@@ -232,7 +233,7 @@ footer {
 /*footerエリアここまで*/
 
 /*レスポンシブデザイン1190px max*/
-@media screen and (min-width:1101px) and ( max-width:1199px) {
+@media screen and ( max-width:1199px) {
   .inner {
     width: 97%;
   }
@@ -269,9 +270,12 @@ footer {
   .grid-inner li:nth-of-type(4n){
     margin-top: 80px;
   }
+  .plan-table {
+    width: 100%;
+  }
 }
 /*spエリアここから*/
-@media screen and (min-width:0px) and (max-width:767px) {
+@media screen and (max-width:767px) {
 .inner {
   width: 97%;
 }
